@@ -1,5 +1,7 @@
 package br.com.juli0mendes.webflux.document;
 
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,15 +11,16 @@ public class Playlist {
 	@Id
 	private String id;
 	
-	private String nome;
+	@NotBlank
+	private String name;
 	
 	public Playlist() {
 	}
 
-	public Playlist(String id, String nome) {
+	public Playlist(String id, String name) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 	}
 
 	public String getId() {
@@ -28,11 +31,11 @@ public class Playlist {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 }
