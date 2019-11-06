@@ -1,6 +1,5 @@
 package br.com.juli0mendes.webflux;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.RequestPredicates;
@@ -13,7 +12,7 @@ public class PlaylistRouter {
 
 	private static final String ENDPOINT = "/playlist";
 
-	@Bean
+//	@Bean
 	public RouterFunction<ServerResponse> route(PlaylistHandler playlistHandler) {
 		return RouterFunctions
 				.route(RequestPredicates.GET(ENDPOINT).and(RequestPredicates.accept(MediaType.APPLICATION_JSON)), playlistHandler::findAll)

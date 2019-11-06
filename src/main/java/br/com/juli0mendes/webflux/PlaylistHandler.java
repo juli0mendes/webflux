@@ -1,7 +1,6 @@
 package br.com.juli0mendes.webflux;
 
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -10,7 +9,7 @@ import br.com.juli0mendes.webflux.document.Playlist;
 import br.com.juli0mendes.webflux.service.PlaylistService;
 import reactor.core.publisher.Mono;
 
-@Component
+//@Component
 public class PlaylistHandler {
 
 	private final PlaylistService playlistService;
